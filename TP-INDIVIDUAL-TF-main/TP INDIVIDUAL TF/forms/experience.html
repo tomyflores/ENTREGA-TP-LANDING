@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SHOES.TF_</title>
+
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/forms.css">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <link rel="icon" href="../img/iconos/logo-marca-main.png">
+
+</head>
+
+
+<body>
+
+    <!--header - menu-->
+    <body>
+        <header>
+            <img src="../img/iconos/logo-marca-main.png" alt="logo" class="logo">
+    
+    
+            <section class="container">
+                <h1 class="maintxt">SHOES.TF_</h1>
+            </section>
+    
+        </header>
+    <br>
+    
+    <!-- main -->
+    
+    <div class="container-all">
+
+    <main>
+        <section>
+            <div>
+                <h2 class="form-title">CONTANOS TU EXPERIENCIA</h2>
+                <h3 class="form-subtitle">Seguimos mejorando para brindar el mejor servicio</h3>
+            </div>
+
+            <br>
+
+            <div class="containerform">
+                <form action="mailto:tommygonzalezflores@gmail.com" class="form" method="get" id="form">
+                    <fieldset>
+                        <legend>COMPLETA EL SIGUIENTE FORMULARIO</legend>
+                        <div>
+                            
+                            <label for="sucursal" class="questions">¿QUE SUCURSAL VISITASTE?</label>
+                            <select name="sucursal" id="sucursal" required>
+                                <option value="" selected>SELECCIONE UNA OPCION</option>
+                                <option value="plm">PALERMO</option>
+                                <option value="rec">RECOLETA</option>
+                                <option value="bel">BELGRANO</option>
+                                <option value="rm">RAMOS MEJIA</option>
+                                <option value="si">SAN ISIDRO</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div>
+                            <p class="questions">¿ESTAS SATISFECHO CON EL SERVICIO BRINDADO?</p>
+                            <input type="radio" name="opcion" id="serviceyes" required>
+                            <label for="service-yes">SI</label>
+                            <input type="radio" name="opcion" id="serviceno" required>
+                            <label for="service-no">NO</label>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="seller-name" class="questions">¿QUE VENDEDOR TE ATENDIO?</label>
+                            <input type="text" name="sellername" id="sellername"   placeholder="NOMBRE Y APPELIDO" required>
+                        </div>
+                        <br>
+                        <div>
+                            <p class="questions">¿COMO PUNTUARIAS LA ATENCION DEL VENDEDOR?</p>
+                            <input type="checkbox" id="vend-uno" value="uno" name="punt" >
+                            <label for="vend-uno">1</label>
+                            <input type="checkbox" id="vend-dos" value="dos" name="punt" >
+                            <label for="vend-dos">2</label>
+                            <input type="checkbox" id="vend-tres" value="tres" name="punt" >
+                            <label for="vend-tres">3</label>
+                            <input type="checkbox" id="vend-cuatro" value="cuatro" name="punt" >
+                            <label for="vend-cuatro">4</label>
+                            <input type="checkbox" id="vend-cinco" value="cinco" name="punt" >
+                            <label for="vend-cinco">5</label>
+                            <input type="checkbox" id="vend-seis" value="seis" name="punt" >
+                            <label for="vend-seis">6</label>
+                            <input type="checkbox" id="vend-siete" value="siete" name="punt" >
+                            <label for="vend-siete">7</label>
+                            <input type="checkbox" id="vend-ocho" value="ocho" name="punt" >
+                            <label for="vend-ocho">8</label>
+                            <input type="checkbox" id="vend-nueve" value="nueve" name="punt" >
+                            <label for="vend-nueve">9</label>
+                            <input type="checkbox" id="vend-diez" value="diez" name="punt" >
+                            <label for="vend-diez">10</label>
+                        </div>
+                        <br>
+                        <div>
+                            <p class="questions">¿COMO PUNTEARIAS LA MARCA GLOBALMENTE?</p>
+                            <input type="checkbox" id="global-uno" value="uno" name="puntgl" >
+                            <label for="global-uno">1</label>
+                            <input type="checkbox" id="global-dos" value="dos" name="puntgl" >
+                            <label for="global-dos">2</label>
+                            <input type="checkbox" id="global-tres" value="tres" name="puntgl" >
+                            <label for="global-tres">3</label>
+                            <input type="checkbox" id="global-cuatro" value="cuatro" name="puntgl" >
+                            <label for="global-cuatro">4</label>
+                            <input type="checkbox" id="global-cinco" value="cinco" name="puntgl" >
+                            <label for="global-cinco">5</label>
+                            <input type="checkbox" id="global-seis" value="seis" name="puntgl" >
+                            <label for="global-seis">6</label>
+                            <input type="checkbox" id="global-siete" value="siete" name="puntgl" >
+                            <label for="global-siete">7</label>
+                            <input type="checkbox" id="global-ocho" value="ocho" name="puntgl" >
+                            <label for="global-ocho">8</label>
+                            <input type="checkbox" id="global-nueve" value="nueve" name="puntgl" >
+                            <label for="global-nueve">9</label>
+                            <input type="checkbox" id="global-diez" value="diez" name="puntgl" >
+                            <label for="global-diez">10</label>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="comments" class="questions">COMENTARIOS Y SUGERENCIAS</label>
+                            <textarea name="comments" id="comments" cols="30" rows="5" placeholder="CONTANOS TU EXPERIENCIA" maxlength="2000"></textarea required>
+                        </div>
+                    </fieldset>
+
+                    <br>
+
+                    <button type="submit">ENVIAR FORMULARIO</button>
+                    <button type="reset">BORRAR FORMULARIO</button>
+                </form>
+            </div>
+
+            <br><br>
+
+            
+            <div class="home">
+                <a href="../index.html">REGRESAR AL MENU</a>
+            </div>
+
+        </section>
+    </main>
+
+
+
+    <!-- footer -->
+    <div class="container-footer">	
+
+        <footer>
+
+            <div class="logo-footer">
+                <img src="../img/iconos/logo-marca-main.png" alt="logo">
+            </div>
+
+            <div>
+                <h4>#WalkEm'Everywhere.</h4>
+            </div>
+
+            <div class="redes-footer">
+                <a href="https://www.facebook.com/dropsba"><i class="fab fa-facebook-f icon-redes-footer"></i></a>
+                <a href=""><i class="fab fa-google-plus-g icon-redes-footer"></i></a>
+                <a href="https://instagram.com/tomyflores_?igshid=MzRlODBiNWFlZA=="><i class="fab fa-instagram icon-redes-footer"></i></a>
+            </div>
+
+            <div>
+            <hr>
+            <h4>© 2023 Shoes.TF_ - Todos los Derechos Reservados</h4>        
+            </div>
+
+            <div class="docs">
+                <a href="../pdf/POLITICAS DE PRIVACIDAD.pdf">Politicas de Privacidad</a>
+                <a href="../pdf/TERMINOS Y CONDICIONES.pdf">Terminos y Condiciones</a>
+            </div>
+
+        </footer>
+
+    </div>
+    <script src="../js/formulario-exp.js"></script>
+</body>
+</html>

@@ -1,0 +1,717 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap');
+
+/* 0) general */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* 1a) header */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    box-shadow: 0 4px 25px -22px black;
+    z-index: 2;
+}
+
+.header-content{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 1b) logo */
+.logo{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1 b{
+    color: #7718ea;
+}
+
+/* 1b.2) imagen en logo */
+.img-logo-header{
+    width: 87px;
+    height: 87px;
+}
+
+/* 1c) menu */
+
+.menu nav ul li a i{
+    display: none;
+}
+
+.menu {
+    height: 80px;
+}
+
+.menu nav{
+    height: 100%;
+}
+
+.menu nav ul{
+    height: 100%;
+    display: flex;
+    list-style: none;
+}
+
+.menu nav ul li{
+    height: 100%;
+    margin: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.menu-selected:before{
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: #7718ea;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu nav ul li a{
+    color: #777777;
+    font-size: 18px;
+    transition: color 300ms;
+}
+
+.menu nav ul li a:hover{
+    color:  #7718ea;
+}
+
+.menu .text-menu-selected{
+    color: #7718ea;
+}
+
+#icon-menu{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    padding: 10px;
+    font-size: 20px;
+    background: #eeeeeefa;
+    border-radius: 100%;
+    color: #787878;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#icon-menu:hover{
+    opacity: 0.8;
+}
+
+/* 1d) animacion de hover */
+.nav-menu a:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 30%;
+    height: 2px;
+    width: 100%;
+    background:  #7718ea;
+    /*animacion de derecha a izquierda*/
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+  }
+
+.nav-menu a:hover:after {
+    /*animacion de derecha a izquierda*/
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* 2a) portada */
+.container-cover{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/fondos/fondoportada.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container-cover:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(103, 38, 255, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container-info-cover{
+    max-width: 800px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.container-info-cover h1{
+    font-size: 60px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.container-info-cover p{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* 2b) boton ver catalogo */
+.catalogo-button{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    letter-spacing: 4px;
+    font-size: 24px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+    margin-top: 40px;
+    background-color: #7a309cab;
+    }
+  
+  .catalogo-button:hover{
+    background: #963bc089;
+    box-shadow: 0 0 10px  #963bc089, 0 0 40px  #963bc089, 0 0 80px  #963bc089;
+    transition-delay: 1s;
+    color: #fff;
+  }
+  
+  .catalogo-button span{
+    position: absolute;
+    display: block;
+  }
+  
+  #span1{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent, #c64bffed);
+  }
+  
+  .catalogo-button:hover #span1{
+    left: 100%;
+    transition: 1s;
+  }
+  
+  #span3{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent, #c64bffed);
+  }
+  
+  .catalogo-button:hover #span3{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+  }
+  
+  #span2{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent, #c64bffed);
+  }
+  
+  .catalogo-button:hover #span2{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+  } 
+  
+  #span4{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#c64bffed);
+  }
+  
+  .catalogo-button:hover #span4{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+  } 
+
+.container-info-cover h1{
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* 3a) cuerpo centro */
+
+.container-content{
+    width: 1200px;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+article{
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 40px;
+    box-shadow: -10px 0 20px -30px black;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;    
+}
+
+article:before{
+    content: '';
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #7718ea;
+}
+
+article h1{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+/* letra de todo el art */
+article p{
+    margin-top: 20px;
+    font-size: 18px;
+    color: #3c3c3c;
+}
+
+article img{
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* 3b) zapatillas destacadas */
+.shoeinfo, .shoeinfo2, .shoeinfo3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.shoecard{
+  margin: 20px;
+  width: 500px;
+  height: 300px;
+  border-radius: 5px;
+  background: var(--i);
+  background-size: cover;
+  box-shadow: 3px 5px 5px rgba(22, 22, 22, 0.8);
+  overflow: hidden;
+}
+
+#shoecard1{
+    background-image: url(../img/zapatillas/Nike-SB-Dunk-Low-J-Pack-Chicago-1\ XX.jpg);
+    background-position: center center;
+}
+
+#shoecard2{
+    background-image: url(../img/zapatillas/Jordan-1-Mid-Barely-Orange-Light-Violet-Women_s\ XX.jpg);
+    background-position: center center;
+}
+  
+#shoecard3{
+    background-image: url(../img/zapatillas/Jordan-4-Retro-University-Blue\ XX.jpg);
+    background-position: center center;
+}
+  
+#shoecard4{
+    background-image: url(../img/zapatillas/Jordan-4-Retro-Seafoam-Women_s\ XX.jpg);
+    background-position: center center;
+}
+
+#shoecard5{
+    background-image: url(../img/zapatillas/Nike-Dunk-Low-PRM-Vintage-Navy-Women_s.jpg);
+    background-position: center center;
+}
+
+#shoecard6{
+    background-image: url(../img/zapatillas/Jordan-5-Retro-DJ-Khaled-We-The-Best-Crimson-Bliss.jpg);
+    background-position: center center;
+}
+  
+.shoecontent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0, .4);
+    opacity: 0;
+    transition: .5s;
+    color: #fff;
+}
+  
+.shoecontent h2,a {
+    color: rgba(255,255,255, .8);
+    margin: 10px 0;
+}
+  
+.shoecard:hover .shoecontent{
+    opacity: 1;
+}
+
+.shoecontent h3, .shoecontent p{
+    text-align: center;
+}
+
+/* 3c) noticia de nueva forma de envio */
+.shipping-news{
+    background-color: #d6d2e1;
+    border: #d8cde2 solid 2px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.shippingtitle{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+}
+
+.shippingsubtitle{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.shippingparraf{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 15px;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* 4) cuerpo derecha */
+
+.container-aside aside{
+  width: 320px;
+  border-right: 6px;
+  box-shadow: 0 0 20px -20px black;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-left: 40px;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+}
+
+.container-aside aside img{
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+}
+
+.container-aside aside h2,
+.container-aside aside p{
+    padding: 10px;
+    
+} 
+
+
+.container-aside aside h2{
+    color: white;
+}
+
+.container-aside aside button{
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px 50px;
+    font-size: 16px;
+    background: #32218aa7;
+    border: #23175eb5 solid 4px;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.container-aside aside button:hover{
+    opacity: 0.9;
+}
+
+.infocard{
+    border: #d8cde2 solid 2px;
+    background-color: #32218aa7;
+    border-radius: 5%;
+    box-shadow: 0px 1px 10px rgb(0,0,0,0.2);
+    text-align: center;
+    overflow: hidden;
+    cursor: default;
+    transition: all 400ms ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 0;
+}
+
+.infocard:hover{
+    box-shadow:5px 5px 20px rgb(0,0,0,0.4);
+    transform: translateY(-3%);
+}
+
+.infocard button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* 5) footer */
+.container-footer{
+    width: 100%;
+    padding: 40px 0;
+    background: #f7f7f7;
+    margin-top: 40px;
+}
+
+.container-footer footer{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container-footer footer .logo-footer{
+    text-align: center;
+}
+
+.logo-footer{
+    padding: 0;
+}
+
+.container-footer footer .logo-footer img{
+    width: 100px;
+}
+
+.container-footer footer .redes-footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.container-footer footer .redes-footer .icon-redes-footer{
+    font-size: 20px;
+    margin: 20px;
+    background: #efefef;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: #a2a2a2;
+}
+
+footer .redes-footer .fa-facebook-f:hover{
+    background: #41579A;
+    color: #fff;
+}
+
+footer .redes-footer .fa-google-plus-g:hover{
+    background: #DE4C34;
+    color: #fff;
+}
+
+footer .redes-footer .fa-instagram:hover{
+    background: linear-gradient(to top right, #FCDE30, #E9712A, #D2313B, #AE4198, #7540A1, #5443A8);
+    color: #fff;
+}
+
+
+.container-footer footer hr{
+    margin-top: 20px;
+    border: none;
+    height: 2px;
+    background: #c0c0c07a;
+}
+
+
+.container-footer h4, .docs{
+    text-align: center;
+    color: #8e8e8e;
+    font-weight: 500;
+}
+
+.docs a:hover{
+    color: #7718ea;
+}
+
+.docs a{
+    color:#8e8e8e;
+}
+
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+/* Responsive Design - adaptable a dispositivos moviles*/
+
+@media screen and (max-width: 1220px){
+
+    .header-content,
+    .container-content,
+    .container-footer footer{
+        max-width: 1000px;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 1020px){
+
+    .container-content{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    article{
+        box-shadow: 0 0 0 0;
+    }
+
+    .container-aside{
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-aside aside{
+        max-width: 300px;
+        margin: 10px;
+    }
+
+}
+
+
+@media screen and (max-width: 800px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .move-container-all{
+        transform: translateX(300px);
+    }
+
+    .menu{
+        width: 0px;
+        height: 100vh;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        background: #fff;
+        overflow: hidden;
+        transform: translateX(-350px);
+        box-shadow: 10px 0 20px -25px black;
+        transition: all 300ms cubic-bezier(1,0,0,1);
+    }
+
+    .show-lateral {
+        width: 300px;
+        transform: translateX(0px);
+    }
+
+    .menu nav ul {
+        flex-direction: column;
+    }
+
+    .menu nav ul li{
+        max-width: 200px;
+        height: 50px;
+        justify-content: flex-start;
+    }
+
+    
+    .menu-selected:before{
+        width: 0;
+    }
+
+    .menu nav ul li a{
+        margin-top: 40px;
+        color: #858585;
+    }
+
+    .menu nav ul li a i{
+        width: 20px;
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    #icon-menu{
+        display: flex;
+    }
+
+    .container-aside{
+        flex-wrap: wrap;
+    }
+
+    .shippingparraf{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #shipquestion{
+        padding-left: 10px;
+        padding-right: 10px;
+    } 
+
+    .nav-menu a:after{
+        bottom: 0;
+        width: 0;
+    }
+
+}

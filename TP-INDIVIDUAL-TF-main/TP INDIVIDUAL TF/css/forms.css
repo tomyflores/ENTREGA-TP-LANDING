@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap');
+
+/* 0) general */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* 1a) titulo header */
+
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.maintxt{
+    text-transform: uppercase;
+    font-size: 55px;
+    cursor: default;
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
+    background-image: linear-gradient(to left, rgb(130, 112, 248), rgb(100, 86, 191), rgb(71, 61, 139), rgb(51, 44, 100));
+    background-size: 200%;
+    -webkit-background-clip: text;
+    animation: move 30s linear infinite;
+    letter-spacing: 6px;
+}
+
+@keyframes move{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+
+/* 1b) logo del header */
+
+.logo{
+    width: 10%;
+    height: 10%;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* 2a) cuerpo del forms */
+
+main{
+    background-color: #32218aa7;
+    padding: 40px;
+}
+
+
+/* 2ab) el forms en si (interior) */
+
+legend{
+    background-color: #32218aa7;
+    padding: 10px;
+    color: white;
+}
+
+.questions{
+    font-size: 18px;
+    color:  rgb(219, 213, 252);
+}
+
+fieldset{
+    border-radius: 25px;
+    padding: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-color: darkslateblue;
+    background-color: #3f3185a7;
+}
+
+input,textarea,select{
+    background: transparent;
+    border-color:  rgb(219, 213, 252);
+    border-radius: 10px;
+    color:  rgb(219, 213, 252);
+}
+
+::placeholder{
+    color: rgb(219, 213, 252);
+}
+
+button{
+    color: white;
+    border-color: rgb(167, 159, 218);
+    background-color: darkslateblue;
+    padding:5px;
+    width: 175px;
+    height: 50px;
+}
+
+select{
+    color:  rgb(219, 213, 252);
+}
+
+textarea{
+    color: rgb(219, 213, 252);
+}
+
+option{
+    color: rgb(219, 213, 252);
+    background-color: darkslateblue;
+    border-color:  rgb(219, 213, 252);
+}
+
+label{
+    color: rgb(219, 213, 252);
+}
+
+.home a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: #3f3185a7;
+    padding: 15px;
+}
+
+.home a:hover{
+    color: #7718ea;
+    background-color: rgb(219, 213, 252);
+}
+
+.form-title{
+    color: white;
+}
+
+.updatesquestions input{
+    width: 250px;
+}
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* 5) footer */
+.container-footer{
+    width: 100%;
+    padding: 40px 0;
+    background: #f7f7f7;;
+}
+
+.container-footer footer{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container-footer footer .logo-footer{
+    text-align: center;
+}
+
+.logo-footer{
+    padding: 0;
+}
+
+.container-footer footer .logo-footer img{
+    width: 100px;
+}
+
+.container-footer footer .redes-footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.container-footer footer .redes-footer .icon-redes-footer{
+    font-size: 20px;
+    margin: 20px;
+    background: #efefef;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: #a2a2a2;
+}
+
+footer .redes-footer .fa-facebook-f:hover{
+    background: #41579A;
+    color: #fff;
+}
+
+footer .redes-footer .fa-google-plus-g:hover{
+    background: #DE4C34;
+    color: #fff;
+}
+
+footer .redes-footer .fa-instagram:hover{
+    background: linear-gradient(to top right, #FCDE30, #E9712A, #D2313B, #AE4198, #7540A1, #5443A8);
+    color: #fff;
+}
+
+
+.container-footer footer hr{
+    margin-top: 20px;
+    border: none;
+    height: 2px;
+    background: #c0c0c07a;
+}
+
+
+.container-footer h4, .docs{
+    text-align: center;
+    color: #8e8e8e;
+    font-weight: 500;
+}
+
+.docs a:hover{
+    color: #7718ea;
+}
+
+.docs a{
+    color:#8e8e8e;
+}
